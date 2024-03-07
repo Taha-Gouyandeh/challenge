@@ -1,0 +1,4 @@
+@import "../color";
+.bg-radial-gradient {
+  background: radial-gradient(ellipse at center, $blue2 0%,  $blue1 100%);
+}
