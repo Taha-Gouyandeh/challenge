@@ -6,3 +6,42 @@
 body {
   overflow-x: hidden !important;
 }
+
+// for scroll bar
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $dark2;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $gray3;
+}
+
+// hide change button in number input
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+// change background of radio and checkbox
+input[type=radio] {
+  accent-color: $blue1 !important;
+}
+
+input[type=checkbox] {
+  accent-color: $blue1 !important;
+}
+
+// change style of button when disabled
+button {
+  &:disabled {
+    cursor: not-allowed !important;
+    opacity: 0.65;
+  }
+}
