@@ -6,6 +6,7 @@ let user: UserType = {
   email: "",
 };
 
+// this is for prevent server side error
 if (
   JSON.parse(getLocalItems("user") + "") != null &&
   JSON.parse(getLocalItems("user") + "") != ""

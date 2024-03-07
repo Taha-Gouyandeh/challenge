@@ -1,7 +1,12 @@
 export const setLocalItems = (key: string, object: any) => {
-  localStorage.setItem(`Challenge-${key}`, JSON.stringify(object));
+  localStorage.setItem(`challenge-${key}`, JSON.stringify(object));
 };
 
 export const getLocalItems = (key: string): any => {
-  return JSON.parse(localStorage.getItem(`Challenge-${key}`) + "");
+  // for prevent server side error
+  if (typeof window !== "undefined") {
+    return JSON.parse(localStorage.getItem(`challenge-${key}`) + "");
+  } else {
+    return null;
+  }
 };
