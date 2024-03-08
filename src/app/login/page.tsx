@@ -105,10 +105,10 @@ export default function LoginPage() {
                   textError={"Please use at least 8 English characters"}
                 />
               </label>
-              <label className={"flex flex-row items-center gap-2"}>
+              <label>
                 <input
                   type={"checkbox"}
-                  className={"outline-none"}
+                  className={"outline-none me-1"}
                   checked={acceptConditions}
                   onChange={() => {
                     setAcceptConditions(!acceptConditions);
@@ -116,13 +116,16 @@ export default function LoginPage() {
                 />
                 <span className={"self-start cursor-pointer"}>
                   By creating an account on Fiber, you agree to the{" "}
-                  <Link href={""} className={"text-custom-blue1 underline"}>
+                  <Link
+                    href={""}
+                    className={"text-custom-blue1 underline hover:font-medium"}
+                  >
                     Term & Conditions
                   </Link>
                 </span>
               </label>
               <button
-                className={"bg-custom-blue1 p-2 text-custom-white rounded-md"}
+                className={"btn-blue1"}
                 disabled={
                   !(
                     name.length >= 2 &&
@@ -137,7 +140,9 @@ export default function LoginPage() {
             </form>
             <span className={"text-center"}>
               Already have an account?{" "}
-              <span className={"text-custom-blue1 cursor-pointer"}>
+              <span
+                className={"text-custom-blue1 cursor-pointer hover:font-medium"}
+              >
                 Sign in
               </span>
             </span>
