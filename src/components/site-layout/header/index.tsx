@@ -30,9 +30,11 @@ export const Header: React.FC = () => {
               "flex flex-row justify-between items-center gap-3 container mx-auto"
             }
           >
-            <Link href={"/"} className={"text-2xl md:w-1/3 hover:font-bold"}>
-              Fiber
-            </Link>
+            <div className={"md:w-1/3"}>
+              <Link href={"/"} className={"text-2xl hover:font-bold"}>
+                Fiber
+              </Link>
+            </div>
             <div
               className={
                 "hidden md:flex flex-row gap-3 text-lg font-light w-1/3 justify-center"
