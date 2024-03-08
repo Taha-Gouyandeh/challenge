@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
   return (
     <header
       className={
-        "flex flex-row justify-between fixed top-0 w-dvw bg-custom-light2 p-4"
+        "flex flex-row justify-between fixed z-10 top-0 w-dvw bg-custom-light2 p-4"
       }
     >
       <div

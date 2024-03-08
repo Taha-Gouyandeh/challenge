@@ -1,15 +1,14 @@
 import React from "react";
+import { SiteLayout, CommentList } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 import heroImage from "@/assets/images/heroIllustration.png";
 import startImage from "@/assets/images/star.svg";
 import checkImage from "@/assets/images/Checkmark.svg";
-import hamburgerMenuImage from "@/assets/images/HamburgerMenu.svg";
 import timeImage from "@/assets/images/time.svg";
 import codeImage from "@/assets/images/code.svg";
 import allSizesImage from "@/assets/images/allSizes.svg";
 import secondHero from "@/assets/images/PageImage.png";
-import { SiteLayout } from "@/components";
 
 export default function Home() {
   return (
@@ -39,7 +38,9 @@ export default function Home() {
                 <button className={"btn-blue1"}>Start Free Trial</button>
                 <Link
                   href={""}
-                  className={"text-custom-blue1 underline font-bold"}
+                  className={
+                    "text-custom-blue1 underline font-bold hover:font-extrabold"
+                  }
                 >
                   View Examples
                 </Link>
@@ -102,7 +103,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-
           <div
             className={"flex flex-row bg-custom-blue1 rounded-lg pt-12 px-12 "}
           >
@@ -136,6 +136,9 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+        <div className={"container mx-auto px-8 py-12 gap-12"}>
+          <CommentList />
         </div>
       </main>
     </SiteLayout>
