@@ -1,0 +1,14 @@
+@import "../../../app/color";
+
+.btn-outline-comment {
+  border: 1px solid $light1;
+  border-radius: 8px;
+  color: $blue1;
+  background-color: $white;
+  padding: 12px;
+
+  &:hover{
+    background-color: $blue1;
+    color: $white;
+  }
+}
