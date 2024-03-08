@@ -13,9 +13,11 @@ import secondHero from "@/assets/images/PageImage.png";
 export default function Home() {
   return (
     <SiteLayout>
-      <main className={"flex flex-col"}>
+      <div className={"flex flex-col"}>
         <div className={" w-dvw bg-custom-light2"}>
-          <div className={"container mx-auto flex flex-row min-h-dvh"}>
+          <div
+            className={"container mx-auto flex flex-row h-dvh max-h-[1440px]"}
+          >
             <div
               className={
                 "w-full md:w-1/2 p-8 flex flex-col justify-center gap-8"
@@ -140,7 +142,7 @@ export default function Home() {
         <div className={"container mx-auto px-8 py-12 gap-12"}>
           <CommentList />
         </div>
-      </main>
+      </div>
     </SiteLayout>
   );
 }
