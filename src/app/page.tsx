@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <SiteLayout>
       <div className={"flex flex-col"}>
-        <div className={" w-dvw bg-custom-light2"}>
+        <div className={"w-dvw bg-custom-light2"}>
           <div
             className={"container mx-auto flex flex-row h-dvh max-h-[1440px]"}
           >
