@@ -40,15 +40,11 @@ export const Header: React.FC = () => {
                 "hidden md:flex flex-row gap-3 text-lg font-light w-1/3 justify-center"
               }
             >
-              <span className={"cursor-pointer hover:font-medium"}>
+              <span className={"cursor-pointer hover:font-bold"}>
                 Community
               </span>
-              <span className={"cursor-pointer hover:font-medium"}>
-                Pricing
-              </span>
-              <span className={"cursor-pointer hover:font-medium"}>
-                Features
-              </span>
+              <span className={"cursor-pointer hover:font-bold"}>Pricing</span>
+              <span className={"cursor-pointer hover:font-bold"}>Features</span>
             </div>
             <div className={"hidden md:flex flex-row gap-2 w-1/3 justify-end"}>
               {emailRegex.test(userObj.email) ? (
