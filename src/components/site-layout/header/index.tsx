@@ -57,17 +57,17 @@ export const Header: React.FC = () => {
                   <div className={"relative"}>
                     <div
                       className={
-                        "absolute right-0 flex flex-col justify-center bg-custom-light2 shadow rounded-md w-full text-nowrap"
+                        "absolute right-0 flex flex-col justify-center bg-custom-light2 shadow rounded-md min-w-full text-nowrap"
                       }
                     >
                       <Link
                         href={"/profile"}
-                        className={"p-2 text-center border-b"}
+                        className={"py-2 px-7 text-center border-b"}
                       >
                         Profile
                       </Link>
                       <button
-                        className={"p-2"}
+                        className={"py-2 px-7"}
                         onClick={() => {
                           setUserObj({ name: "", email: "" });
                         }}
