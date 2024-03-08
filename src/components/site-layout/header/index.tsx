@@ -94,7 +94,10 @@ export const Header: React.FC = () => {
                 </div>
               )}
             </div>
-            <label htmlFor={"drawer-checkbox"} className={"flex md:hidden"}>
+            <label
+              htmlFor={"drawer-checkbox"}
+              className={"cursor-pointer flex md:hidden"}
+            >
               <Image alt={"Hamburger Menu Image"} src={hamburgerMenuImage} />
             </label>
           </div>
@@ -108,35 +111,38 @@ export const Header: React.FC = () => {
                 <span>×</span>
               </label>
               {emailRegex.test(userObj.email) ? (
-                <div className={"flex flex-col gap-0"}>
-                  <span className={"font-bold cursor-pointer"}>
-                    {userObj.name}
-                  </span>
-                  <span className={"font-bold cursor-pointer"}>
-                    {userObj.email}
-                  </span>
-                </div>
+                <>
+                  <span className={"font-bold"}>{userObj.name}</span>
+                  <span className={"font-bold"}>{userObj.email}</span>
+                  <Link
+                    href={"/profile"}
+                    className={
+                      "cursor-pointer hover:font-bold p-2 rounded-md border text-custom-dark2"
+                    }
+                  >
+                    Profile
+                  </Link>
+                </>
               ) : (
                 <></>
               )}
-
               <span
                 className={
-                  "cursor-pointer hover:font-medium p-2 rounded-md border text-custom-dark2"
+                  "cursor-pointer hover:font-bold p-2 rounded-md border text-custom-dark2"
                 }
               >
                 Community
               </span>
               <span
                 className={
-                  "cursor-pointer hover:font-medium p-2 rounded-md border text-custom-dark2"
+                  "cursor-pointer hover:font-bold p-2 rounded-md border text-custom-dark2"
                 }
               >
                 Pricing
               </span>
               <span
                 className={
-                  "cursor-pointer hover:font-medium p-2 rounded-md border text-custom-dark2"
+                  "cursor-pointer hover:font-bold p-2 rounded-md border text-custom-dark2"
                 }
               >
                 Features
