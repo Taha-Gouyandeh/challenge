@@ -9,6 +9,7 @@ html {
 
 body {
   overflow-x: hidden !important;
+  font-family: '--font-inter', sans-serif;
 }
 
 // for scroll bar
@@ -48,6 +49,7 @@ button {
     cursor: not-allowed !important;
     opacity: 0.65 !important;
   }
+
   &:hover {
     opacity: 0.85;
   }
@@ -73,7 +75,7 @@ button {
   }
 }
 
-.btn-blue1{
+.btn-blue1 {
   background-color: $blue1;
   color: $white;
   padding: 12px 16px;
