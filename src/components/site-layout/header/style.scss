@@ -1,0 +1,58 @@
+#UserName{
+  & div{
+    display: none;
+  }
+  &:hover div{
+    display: flex;
+  }
+}
+
+
+// create drawer for mobile size
+.drawer-background-part {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 11;
+  opacity: 0;
+}
+
+#drawer-checkbox:checked + .drawer-side-part {
+  left: 0;
+}
+
+.drawer-side-part {
+  flex-direction: column;
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  left: -80vw;
+  width: 80vw;
+  max-width: 20rem;
+  height: 100dvb;
+  background-color: var(--back, #fff);
+  z-index: 12;
+  border-start-end-radius: 0.5rem;
+  padding: 1rem;
+  transition: 1s ease-in-out;
+}
+
+
+#drawer-checkbox:checked ~ .drawer-background-part {
+  width: 100vw !important;
+  height: 100dvb !important;
+  animation: opacity 1s normal forwards ;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

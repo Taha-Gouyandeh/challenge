@@ -9,43 +9,11 @@ import timeImage from "@/assets/images/time.svg";
 import codeImage from "@/assets/images/code.svg";
 import allSizesImage from "@/assets/images/allSizes.svg";
 import secondHero from "@/assets/images/PageImage.png";
+import { SiteLayout } from "@/components";
 
 export default function Home() {
   return (
-    <>
-      <header
-        className={
-          "flex flex-row justify-between fixed top-0 w-dvw bg-custom-light2 p-4"
-        }
-      >
-        <div
-          className={
-            "flex flex-row justify-between items-center gap-3 container mx-auto"
-          }
-        >
-          <span className={"text-2xl md:w-1/3"}>Fiber</span>
-          <button className={"flex md:hidden"}>
-            <Image alt={"Hamburger Menu Image"} src={hamburgerMenuImage} />
-          </button>
-          <div
-            className={
-              "hidden md:flex flex-row gap-3 text-lg font-light w-1/3 justify-center"
-            }
-          >
-            <span className={"cursor-pointer hover:font-medium"}>
-              Community
-            </span>
-            <span className={"cursor-pointer hover:font-medium"}>Pricing</span>
-            <span className={"cursor-pointer hover:font-medium"}>Features</span>
-          </div>
-          <div className={"hidden md:flex flex-row gap-2 w-1/3 justify-end"}>
-            <button className={"font-bold  py-3 px-4 hover:font-extrabold"}>
-              Sign In
-            </button>
-            <button className={"btn-blue1"}>Sign Up</button>
-          </div>
-        </div>
-      </header>
+    <SiteLayout>
       <main className={"flex flex-col"}>
         <div className={" w-dvw bg-custom-light2"}>
           <div className={"container mx-auto flex flex-row min-h-dvh"}>
@@ -170,69 +138,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className={"bg-custom-light2 p-12"}>
-        <div className={"flex flex-row flex-wrap container mx-auto"}>
-          <div className={"flex flex-col w-full md:w-1/3 p-2 gap-2"}>
-            <span className={"font-bold"}>Fiber</span>
-            <span>
-              With Fiber, you can setup your own personal portfolio in minutes
-              with dozens of premade, beautiful templates.
-            </span>
-            <span className={"mt-auto"}>Made with 🖤 in the Netherlands.</span>
-          </div>
-          <div className={"flex flex-col w-1/2 sm:w-1/4 md:w-1/6 p-2 gap-2"}>
-            <span className={"font-bold"}>Sitemap</span>
-            <span className={"hover:font-bold self-start cursor-pointer"}>
-              Homepage
-            </span>
-            <span className={"hover:font-bold self-start cursor-pointer"}>
-              Pricing
-            </span>
-            <span className={"hover:font-bold self-start cursor-pointer"}>
-              Testimonials
-            </span>
-            <span className={"hover:font-bold self-start cursor-pointer"}>
-              Features
-            </span>
-          </div>
-          <div className={"flex flex-col w-1/2 sm:w-1/4 md:w-1/6 p-2 gap-2"}>
-            <span className={"font-bold"}>Resources</span>
-            <span className={"hover:font-bold self-start cursor-pointer"}>
-              Support
-            </span>
-            <span className={"hover:font-bold self-start cursor-pointer"}>
-              Contact
-            </span>
-            <span className={"hover:font-bold self-start cursor-pointer"}>
-              FAQ
-            </span>
-          </div>
-          <div className={"flex flex-col w-1/2 sm:w-1/4 md:w-1/6 p-2 gap-2"}>
-            <span className={"font-bold"}>Company</span>
-            <span className={"hover:font-bold self-start cursor-pointer"}>
-              About
-            </span>
-            <span className={"hover:font-bold self-start cursor-pointer"}>
-              Customers
-            </span>
-            <span className={"hover:font-bold self-start cursor-pointer"}>
-              BIog
-            </span>
-          </div>
-          <div className={"flex flex-col w-1/2 sm:w-1/4 md:w-1/6 p-2 gap-2"}>
-            <span className={"font-bold"}>Portfolios</span>
-            <span className={"hover:font-bold self-start cursor-pointer"}>
-              Sarah Andrews
-            </span>
-            <span className={"hover:font-bold self-start cursor-pointer"}>
-              Mathew Higgins
-            </span>
-            <span className={"hover:font-bold self-start cursor-pointer"}>
-              Janice Dave
-            </span>
-          </div>
-        </div>
-      </footer>
-    </>
+    </SiteLayout>
   );
 }
