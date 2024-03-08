@@ -110,7 +110,7 @@ export const CommentList: React.FC = () => {
             <small className={"text-custom-red1"}>
               Please{" "}
               <Link href={"/login"} className={"underline"}>
-                Login in
+                Login
               </Link>{" "}
               first.
             </small>
