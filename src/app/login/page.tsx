@@ -118,7 +118,7 @@ export default function LoginPage() {
                   By creating an account on Fiber, you agree to the{" "}
                   <Link
                     href={""}
-                    className={"text-custom-blue1 underline hover:font-medium"}
+                    className={"text-custom-blue1 underline hover:font-bold"}
                   >
                     Term & Conditions
                   </Link>
@@ -141,7 +141,7 @@ export default function LoginPage() {
             <span className={"text-center"}>
               Already have an account?{" "}
               <span
-                className={"text-custom-blue1 cursor-pointer hover:font-medium"}
+                className={"text-custom-blue1 cursor-pointer hover:font-bold"}
               >
                 Sign in
               </span>
