@@ -20,7 +20,9 @@ export const Header: React.FC = () => {
           "flex flex-row justify-between items-center gap-3 container mx-auto"
         }
       >
-        <span className={"text-2xl md:w-1/3"}>Fiber</span>
+        <Link href={"/"} className={"text-2xl md:w-1/3 hover:font-bold"}>
+          Fiber
+        </Link>
         <div
           className={
             "hidden md:flex flex-row gap-3 text-lg font-light w-1/3 justify-center"
@@ -33,18 +35,24 @@ export const Header: React.FC = () => {
         <div className={"hidden md:flex flex-row gap-2 w-1/3 justify-end"}>
           {userObj.email.length > 0 ? (
             <div id={"UserName"}>
-              <span className={"font-bold cursor-pointer"}>{userObj.name}</span>
+              <span className={"font-bold"}>{userObj.name}</span>
               <div className={"relative"}>
                 <div
                   className={
-                    "absolute right-0 flex flex-row justify-center min-w-full text-nowrap pt-2"
+                    "absolute right-0 flex flex-col justify-center bg-custom-light2 shadow rounded-md w-full text-nowrap"
                   }
-                  onClick={() => {
-                    setUserObj({ name: "", email: "" });
-                  }}
                 >
+                  <Link
+                    href={"/profile"}
+                    className={"p-2 text-center border-b"}
+                  >
+                    Profile
+                  </Link>
                   <button
-                    className={"bg-custom-light2 rounded-md px-4 py-1 shadow"}
+                    className={"p-2"}
+                    onClick={() => {
+                      setUserObj({ name: "", email: "" });
+                    }}
                   >
                     Log out
                   </button>
