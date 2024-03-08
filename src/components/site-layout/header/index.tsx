@@ -72,9 +72,20 @@ export const Header: React.FC = () => {
       <input type="checkbox" id="drawer-checkbox" className="hidden" />
       <div className="drawer-side-part">
         <div className={"flex flex-col gap-2 h-full"}>
-          <label htmlFor="drawer-checkbox" className="cursor-pointer">
+          <label htmlFor="drawer-checkbox" className="cursor-pointer self-end">
             <span>×</span>
           </label>
+          {userObj && userObj.email.length > 0 ? (
+            <div className={"flex flex-col gap-0"}>
+              <span className={"font-bold cursor-pointer"}>{userObj.name}</span>
+              <span className={"font-bold cursor-pointer"}>
+                {userObj.email}
+              </span>
+            </div>
+          ) : (
+            <></>
+          )}
+
           <span
             className={
               "cursor-pointer hover:font-medium p-2 rounded-md border text-custom-dark2"
@@ -96,7 +107,34 @@ export const Header: React.FC = () => {
           >
             Features
           </span>
-          <button className={"btn-blue1 px-4 py-1 mt-auto"}>Log out</button>
+
+          {userObj && userObj.email.length > 0 ? (
+            <button
+              onClick={() => {
+                setUserObj({ name: "", email: "" });
+              }}
+              className={"btn-blue1 px-4 py-1 mt-auto"}
+            >
+              Log out
+            </button>
+          ) : (
+            <div className={"flex flex-row  gap-2 mt-auto"}>
+              <Link
+                href={"/login"}
+                className={
+                  "font-bold  py-3 px-4 hover:underline w-1/2 text-center"
+                }
+              >
+                Sign In
+              </Link>
+              <Link
+                href={"/login"}
+                className={"btn-blue1 hover:opacity-85 w-1/2 text-center"}
+              >
+                Sign Up
+              </Link>
+            </div>
+          )}
         </div>
       </div>
       <label

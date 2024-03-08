@@ -2,7 +2,7 @@ import React from "react";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className={"bg-custom-light2 p-12"}>
+    <footer className={"bg-custom-light2 p-12 mt-auto"}>
       <div className={"flex flex-row flex-wrap container mx-auto"}>
         <div className={"flex flex-col w-full md:w-1/3 p-2 gap-2"}>
           <span className={"font-bold"}>Fiber</span>

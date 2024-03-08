@@ -6,10 +6,10 @@ export const SiteLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   return (
-    <>
+    <div className={"min-h-dvh flex flex-col"}>
       <Header />
-      {children}
+      <main>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 };
